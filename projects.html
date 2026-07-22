@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Jasmine Sherif</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">
+      jasmine<span>.</span>sherif
+      <span class="status-dot" title="Available for DE roles"></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html">about</a></li>
+      <li><a href="index.html#services">services</a></li>
+      <li><a href="index.html#skills">skills</a></li>
+      <li><a href="projects.html" aria-current="page">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-head" style="padding-top: clamp(3rem, 7vw, 5rem); padding-bottom: 2rem;">
+  <div class="wrap">
+    <p class="eyebrow">interactive pipeline portfolio</p>
+    <h1>Pipelines, not static screenshots.</h1>
+    <p class="lede">
+      These architecture flows illustrate the live shape of each system: where the raw data enters,
+      how PySpark and containerized engines transform it under deadline, and how clean metrics land in data lakes and warehouses.
+    </p>
+  </div>
+</header>
+
+<section class="projects">
+  <div class="wrap">
+
+    <!-- ============ PROJECT 1 ============ -->
+    <article class="project-card" style="margin-bottom: 3rem;">
+      <div class="project-head">
+        <p class="eyebrow">graduation project &middot; nov 2025</p>
+        <h2>Real-Time Renewable Energy Data Platform</h2>
+        <p class="project-desc">
+          <strong>The Challenge:</strong> Wind and solar output isn't constant: it swings with the weather. Without visibility into those swings, operators can't proactively adjust operations, schedule maintenance, or balance load across sites, leaving renewable capacity underutilized.<br><br>
+          <strong>What I Built:</strong> This platform monitors three wind farms and three solar farms in real time, pulling live weather data (wind speed, solar irradiance, temperature) to predict expected energy output at each site. By correlating weather patterns with production data, it surfaces insights into upcoming high- or low-production windows so operators can make informed decisions rather than finding out after the fact. I owned the on-premise architecture (driving Spark-transformed data through automated SSIS packages into a SQL Server data warehouse) and was responsible for the Solar Azure pipeline.
+        </p>
+        <div class="skill-tags" style="margin-bottom: 2rem;">
+          <span class="skill-tag">Azure Event Hubs</span>
+          <span class="skill-tag">Databricks</span>
+          <span class="skill-tag">PySpark</span>
+          <span class="skill-tag">SSIS</span>
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+
+      <div class="pipeline-story-flow">
+        <!-- NODE 1 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 01 &middot; Source</span>
+                  </div>
+                  <h4 class="node-title">Problem Source</h4>
+                  <p class="node-desc">Weather API polled every 10 min; a multi-threaded Python simulation script emulates 5-second telemetry required for real-time models without throttling.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Demonstration</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <video src="assets/azure_video.mp4" autoplay loop muted playsinline aria-label="Raw data stream video"></video>
+                  </div>
+                  <p class="node-caption">Live 5-second weather telemetry simulation stream.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 1 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 2 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 02 &middot; Engine</span>
+                  </div>
+                  <h4 class="node-title">ETL &amp; Transformation</h4>
+                  <p class="node-desc">Event Hubs ingests the stream; PySpark on Databricks transforms raw feeds into clean Delta Lake layers before automated SSIS packaging.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Architecture</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <img src="assets/databricks.jpg" alt="Databricks PySpark transformation architecture">
+                  </div>
+                  <p class="node-caption">Databricks PySpark to Delta Lake pipeline flow.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 2 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 3 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 03 &middot; Outcome</span>
+                  </div>
+                  <h4 class="node-title">Business Impact</h4>
+                  <p class="node-desc">Clean data lands in the data lake; on-premise pipeline moves it via SSIS into a SQL Server warehouse for instant power output forecasting.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Dashboard &amp; Architecture Schema</span>
+                  </div>
+                  <div class="node-preview-img is-carousel" onclick="openMediaLightbox(this)">
+                    <img src="assets/azure.png" alt="Real-Time Renewable Energy Dashboard Visualization">
+                    <img src="assets/Visual 3.png" alt="Renewable Energy Analytics Visual 3">
+                    <img src="assets/Schmea.jpg" alt="Data Warehouse Architecture &amp; Schema">
+                  </div>
+                  <p class="node-caption">Real-time forecasting dashboard, analytics visual &amp; DB schema. (Swipe / tap to explore)</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT 2 ============ -->
+    <article class="project-card" style="margin-bottom: 3rem;">
+      <div class="project-head">
+        <p class="eyebrow">university final project &middot; team &middot; 6&ndash;8hr deadline</p>
+        <h2>NYC TLC Taxi Trip Analytics Pipeline</h2>
+        <p class="project-desc">
+          <strong>The Challenge:</strong> Ride-hailing platforms like Uber and inDrive lose efficiency when drivers are idle in low-demand areas while riders in high-demand zones wait longer than they should. Without visibility into historical trip patterns, driver positioning is reactive; dispatch happens after demand is already there instead of ahead of it.<br><br>
+          <strong>What I Built:</strong> This pipeline processes NYC TLC taxi trip data (Jan&ndash;Mar 2025) through Docker-staged PySpark ETL into a Hive warehouse, surfacing KPIs on trip volume, pickup/dropoff hotspots, and time-of-day demand through an interactive Python &amp; Flask dashboard. It gives ride-hailing operators the data to proactively position drivers where and when demand is about to spike, rather than finding out after riders are already waiting.
+        </p>
+        <div class="skill-tags" style="margin-bottom: 2rem;">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">PySpark</span>
+          <span class="skill-tag">Apache Hive</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Python &amp; Flask</span>
+        </div>
+        <div style="margin-top: -1rem; margin-bottom: 2rem;">
+          <a href="https://github.com/tasneemsaleh23/NYC_Taxi_Data_Analytics_Pipeline" target="_blank" rel="noopener" class="github-repo-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            View Repository on GitHub ➔
+          </a>
+        </div>
+      </div>
+
+      <div class="pipeline-story-flow">
+        <!-- NODE 1 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 01 &middot; Source</span>
+                  </div>
+                  <h4 class="node-title">Problem Source</h4>
+                  <p class="node-desc">Heavy raw NYC taxi trip datasets (Jan-Mar 2025) needed rapid ingestion under a tight 6-hour deadline. Built Docker-volume staging for raw file landing.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Demonstration</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <img src="assets/Taxi_project/data.avif" alt="NYC TLC Raw Taxi Trip Data Source">
+                  </div>
+                  <p class="node-caption">NYC TLC raw taxi trip data source &amp; Docker-volume staging layer.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 1 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 2 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 02 &middot; Engine</span>
+                  </div>
+                  <h4 class="node-title">ETL &amp; Transformation</h4>
+                  <p class="node-desc">PySpark container handles high-speed schema enforcement, cleansing, trip metric calculations, and zone congestion KPI computations.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Architecture</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <img src="assets/ph-transform.svg" alt="PySpark Transformation Engine">
+                  </div>
+                  <p class="node-caption">Containerized PySpark cleansing & KPI engine.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 2 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 3 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 03 &middot; Outcome</span>
+                  </div>
+                  <h4 class="node-title">Business Impact</h4>
+                  <p class="node-desc">Hive data warehouse metastore backed by PostgreSQL instead of embedded Derby to prevent JVM locks. Shipped live interactive Python &amp; Flask dashboard.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Dashboard</span>
+                  </div>
+                  <div class="node-preview-img is-carousel" onclick="openMediaLightbox(this)">
+                    <img src="assets/Taxi_project/visual 1.jpg" alt="NYC TLC Taxi Trip Analytics Dashboard Visual 1">
+                    <img src="assets/Taxi_project/Visual 2.jpg" alt="NYC TLC Taxi Trip Analytics Dashboard Visual 2">
+                  </div>
+                  <p class="node-caption">NYC TLC trip analytics dashboard visuals &amp; KPI metrics. (Swipe / tap to explore)</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ PROJECT 3 ============ -->
+    <article class="project-card" style="margin-bottom: 3rem;">
+      <div class="project-head">
+        <p class="eyebrow">relational data cleaning &amp; analytics</p>
+        <h2>AdventureWorks Sales ETL &amp; Analysis</h2>
+        <p class="project-desc">
+          <strong>The Challenge:</strong> Raw transactional data sitting in a relational database isn't usable for decision-making on its own: it's normalized across dozens of tables, full of inconsistencies, and has no narrative. Without a structured process to extract, clean, and shape it, sales and product trends buried in the AdventureWorks database stay invisible to anyone who isn't a SQL expert.<br><br>
+          <strong>What I Built:</strong> My first end-to-end ETL pipeline: extracting data directly from the AdventureWorks relational database into Python, loading it into pandas DataFrames, and running it through extensive cleaning (handling nulls, inconsistent types, and merging across related tables) to get it analysis-ready. From there, I built visualizations surfacing sales and product trends that the raw database couldn't tell you on its own. It's a smaller-scope project than my later pipelines, but it's where I first learned what "clean data" actually requires.
+        </p>
+        <div class="skill-tags" style="margin-bottom: 2rem;">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">ETL Pipeline</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Data Visualization</span>
+        </div>
+        <div style="margin-top: -1rem; margin-bottom: 2rem;">
+          <a href="https://github.com/jasmine-sherif/ETL-Project" target="_blank" rel="noopener" class="github-repo-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            View Repository on GitHub ➔
+          </a>
+        </div>
+      </div>
+
+      <div class="pipeline-story-flow">
+        <!-- NODE 1 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 01 &middot; Source</span>
+                  </div>
+                  <h4 class="node-title">Problem Source</h4>
+                  <p class="node-desc">Raw transactional data normalized across dozens of database tables containing nulls, inconsistent types, and unaggregated sales records.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Demonstration</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <img src="assets/Third_Project/source.png" alt="AdventureWorks Raw Relational Database Tables">
+                  </div>
+                  <p class="node-caption">AdventureWorks relational database raw source schema & tables.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 1 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 2 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 02 &middot; Engine</span>
+                  </div>
+                  <h4 class="node-title">ETL &amp; Transformation</h4>
+                  <p class="node-desc">Python &amp; Pandas ETL pipeline extracting raw database tables, performing extensive data cleaning (null handling, type conversions, table merges), and preparing analysis-ready DataFrames.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Architecture</span>
+                  </div>
+                  <div class="node-preview-img" onclick="openMediaLightbox(this)">
+                    <img src="assets/ph-transform.svg" alt="Python &amp; Pandas ETL Pipeline">
+                  </div>
+                  <p class="node-caption">Python &amp; Pandas data extraction, cleansing & transformation pipeline.</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 2 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 3 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Node 03 &middot; Outcome</span>
+                  </div>
+                  <h4 class="node-title">Business Impact</h4>
+                  <p class="node-desc">Built analytical visualizations surfacing hidden sales and product trends, giving stakeholders direct visibility into revenue drivers and inventory performance.</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">Visual Dashboards &amp; Analytics</span>
+                  </div>
+                  <div class="node-preview-img is-carousel" onclick="openMediaLightbox(this)">
+                    <img src="assets/Third_Project/visual 1.png" alt="AdventureWorks Sales &amp; Product Trend Visual 1">
+                    <img src="assets/Third_Project/visual 2.png" alt="AdventureWorks Sales &amp; Product Trend Visual 2">
+                    <img src="assets/Third_Project/visual 3.png" alt="AdventureWorks Sales &amp; Product Trend Visual 3">
+                    <img src="assets/Third_Project/visual 4.png" alt="AdventureWorks Sales &amp; Product Trend Visual 4">
+                  </div>
+                  <p class="node-caption">Sales &amp; product trend analysis visuals. (Swipe / tap to explore)</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 🔍 WhatsApp-Style Media Lightbox Modal -->
+<div class="media-lightbox" id="mediaLightbox" onclick="closeLightboxOnBackdrop(event)">
+  <div class="lightbox-dialog">
+    <button class="lightbox-close" onclick="closeMediaLightbox()" aria-label="Close enlarged media">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" onclick="navigateLightbox(-1)" aria-label="Previous media">&#10094;</button>
+    
+    <div class="lightbox-media-container" id="lightboxMediaContainer">
+      <!-- Dynamically populated enlarged image or video -->
+    </div>
+    
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" onclick="navigateLightbox(1)" aria-label="Next media">&#10095;</button>
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Jasmine Sherif &middot; Data Engineer</span>
+    <div class="footer-links">
+      <a href="https://github.com/jasmine-sherif" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/jasmine-sherif-" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:jasminesherif37@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* WhatsApp-Style Lightbox & Carousel Logic */
+  let currentLightboxMedia = [];
+  let currentLightboxIndex = 0;
+  let currentLightboxCaption = '';
+
+  function openMediaLightbox(element, captionOverride = '') {
+    if (window.event) window.event.stopPropagation();
+    
+    let mediaElements = [];
+    if (element.classList && element.classList.contains('node-preview-img')) {
+      mediaElements = Array.from(element.querySelectorAll('img, video'));
+    } else if (element.tagName === 'IMG' || element.tagName === 'VIDEO') {
+      const parent = element.closest('.node-preview-img');
+      if (parent) {
+        mediaElements = Array.from(parent.querySelectorAll('img, video'));
+        currentLightboxIndex = mediaElements.indexOf(element);
+      } else {
+        mediaElements = [element];
+        currentLightboxIndex = 0;
+      }
+    }
+
+    if (!mediaElements.length) return;
+
+    currentLightboxMedia = mediaElements.map(el => ({
+      src: el.getAttribute('src'),
+      isVideo: el.tagName.toLowerCase() === 'video',
+      alt: el.getAttribute('alt') || el.getAttribute('aria-label') || ''
+    }));
+
+    if (typeof currentLightboxIndex !== 'number' || currentLightboxIndex < 0) {
+      currentLightboxIndex = 0;
+    }
+
+    const captionNode = element.closest('.flip-face') ? element.closest('.flip-face').querySelector('.node-caption') : null;
+    currentLightboxCaption = captionOverride || (captionNode ? captionNode.innerText : (currentLightboxMedia[currentLightboxIndex].alt || ''));
+
+    renderLightboxSlide();
+    document.getElementById('mediaLightbox').classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function renderLightboxSlide() {
+    const container = document.getElementById('lightboxMediaContainer');
+    const media = currentLightboxMedia[currentLightboxIndex];
+    if (!media) return;
+
+    if (media.isVideo) {
+      container.innerHTML = `<video src="${media.src}" controls autoplay loop muted playsinline></video>`;
+    } else {
+      container.innerHTML = `<img src="${media.src}" alt="${media.alt}">`;
+    }
+
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    
+    if (currentLightboxMedia.length > 1) {
+      prevBtn.style.display = 'flex';
+      nextBtn.style.display = 'flex';
+    } else {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    }
+
+    const slideCaption = media.alt || currentLightboxCaption;
+    const countInfo = currentLightboxMedia.length > 1 ? ` (${currentLightboxIndex + 1}/${currentLightboxMedia.length})` : '';
+    document.getElementById('lightboxCaption').innerText = slideCaption + countInfo;
+  }
+
+  function navigateLightbox(direction) {
+    if (window.event) window.event.stopPropagation();
+    currentLightboxIndex = (currentLightboxIndex + direction + currentLightboxMedia.length) % currentLightboxMedia.length;
+    renderLightboxSlide();
+  }
+
+  function closeMediaLightbox() {
+    document.getElementById('mediaLightbox').classList.remove('is-open');
+    document.body.style.overflow = '';
+    const container = document.getElementById('lightboxMediaContainer');
+    container.innerHTML = '';
+  }
+
+  function closeLightboxOnBackdrop(e) {
+    if (e.target.id === 'mediaLightbox') {
+      closeMediaLightbox();
+    }
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+    const icons = document.querySelectorAll('.theme-icon');
+    icons.forEach(icon => {
+      icon.innerText = theme === 'light' ? '☀️' : '🌙';
+    });
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    applyTheme(savedTheme);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMediaLightbox();
+    if (e.key === 'ArrowLeft') navigateLightbox(-1);
+    if (e.key === 'ArrowRight') navigateLightbox(1);
+  });
+</script>
+</body>
+</html>

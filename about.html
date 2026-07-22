@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Jasmine Sherif | Data Composer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">
+      jasmine<span>.</span>sherif
+      <span class="status-dot" title="Available for DE roles"></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="about.html" aria-current="page">about</a></li>
+      <li><a href="index.html#services">services</a></li>
+      <li><a href="index.html#skills">skills</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="contact.html">contact</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-head" style="padding-top: clamp(3.5rem, 8vw, 5.5rem); padding-bottom: 2rem;">
+  <div class="wrap">
+    <p class="eyebrow">my journey &amp; philosophy</p>
+    <h1>Finding the Rhythm in the Noise</h1>
+    <p class="lede">
+      From musical composition &amp; vocal coaching to data architecture: how orchestrating sound and leading vocal ensembles translated into tuning raw, chaotic streams into refined intelligence.
+    </p>
+  </div>
+</header>
+
+<!-- Story Narrative Section -->
+<section style="padding-top: 1rem;">
+  <div class="wrap">
+    
+    <!-- 3-Movement Narrative Cards -->
+    <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 4rem;">
+      
+      <!-- Movement I -->
+      <article class="edu-card" style="border-left: 4px solid var(--cherry);">
+        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cherry); background: var(--cherry-soft); padding: 0.2rem 0.6rem; border-radius: 4px;">Movement I</span>
+          <h3 style="margin: 0; font-size: 1.25rem;">Submerged in the Sea of Paths</h3>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">
+          When I first entered faculty, I felt completely submerged in an overwhelming sea of tracks, technologies, and competing paths. 
+          I knew I wanted to build complex systems, but with so many directions to choose from, knowing where to start felt like 
+          trying to read a score written in ten different keys at once.
+        </p>
+      </article>
+
+      <!-- Movement II -->
+      <article class="edu-card" style="border-left: 4px solid var(--accent); background: var(--surface-hover);">
+        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); background: var(--accent-soft); padding: 0.2rem 0.6rem; border-radius: 4px;">Movement II</span>
+          <h3 style="margin: 0; font-size: 1.25rem;">Musical Leadership &amp; Data Harmony</h3>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">
+          Working as a <strong>Vocal Coach &amp; Ensemble Director</strong> taught me how to lead under pressure: aligning individual voices into pitch-perfect harmony, listening actively for subtle frequency clashes, and keeping timing precise. 
+          When I stepped into Data Engineering, everything clicked. Data engineering is the digital equivalent of orchestrating a full symphony: taking chaotic, unfiltered noise and tuning it into a clean, perfectly harmonized system.
+        </p>
+      </article>
+
+      <!-- Movement III -->
+      <article class="edu-card" style="border-left: 4px solid var(--success);">
+        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--success); background: rgba(110, 155, 123, 0.15); padding: 0.2rem 0.6rem; border-radius: 4px;">Movement III</span>
+          <h3 style="margin: 0; font-size: 1.25rem;">Relentless Dedication &amp; Leadership</h3>
+        </div>
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text);">
+          Today, I channel that same creative discipline and relentless dedication into mastering data architecture. I dedicate immense time, effort, and passion to solving complex system challenges, continuously refining my craft to build cleaner, stronger, and more resilient data infrastructure as if it were a musical masterpiece waiting to be harmonized.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Credentials & Academic Card -->
+    <div class="credentials-header" style="margin-bottom: 2rem;">
+      <p class="eyebrow">academic &amp; field training</p>
+      <h2>Education &amp; Credentials</h2>
+    </div>
+
+    <div class="credentials-grid">
+      <!-- Academic Card -->
+      <article class="edu-card">
+        <div class="edu-card-head">
+          <div>
+            <h3 class="degree-title">B.Sc. in Computer Engineering &amp; Artificial Intelligence</h3>
+            <p class="institution-name">Sohag University | Faculty of Engineering (2023 – 2028)</p>
+          </div>
+          <span class="edu-badge">GPA 3.8 / 4.0</span>
+        </div>
+        
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-val">Top Rank</span>
+            <span class="metric-label">Ranked Top of Class (Last Academic Year)</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">3.8 GPA</span>
+            <span class="metric-label">High Academic Distinction</span>
+          </div>
+        </div>
+
+        <p>
+          Curriculum combining distributed computing systems, database engineering, machine learning algorithms, and software architecture.
+        </p>
+      </article>
+
+      <!-- DEPI Training Card -->
+      <article class="internship-card">
+        <div>
+          <span class="internship-badge">⚡ DEPI &middot; 6 Months (06/2025 &ndash; 12/2025)</span>
+          <h3>DEPI Data Engineering Training</h3>
+          <p>
+            Completed an intensive 6-month specialized field program in Data Engineering. 
+            Engineered production-grade ETL pipelines, distributed Spark streaming jobs, star/snowflake data warehouses, 
+            and query optimization over multi-node clusters.
+          </p>
+        </div>
+        <div class="internship-skills" style="margin-top: 1rem;">
+          <span class="tech-tag">DEPI Graduate</span>
+          <span class="tech-tag">Distributed Spark</span>
+          <span class="tech-tag">Data Warehousing</span>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Jasmine Sherif &middot; Data Engineer</span>
+    <div class="footer-links">
+      <a href="https://github.com/jasmine-sherif" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/jasmine-sherif-" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:jasminesherif37@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('portfolio-theme', theme);
+    const icons = document.querySelectorAll('.theme-icon');
+    icons.forEach(icon => {
+      icon.innerText = theme === 'light' ? '☀️' : '🌙';
+    });
+  }
+
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    applyTheme(savedTheme);
+  });
+</script>
+</body>
+</html>
