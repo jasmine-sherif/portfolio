@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasmine Sherif | Data Engineer</title>
+  <meta name="description"
+    content="Jasmine Sherif | Senior-level portfolio of a Data Engineer specializing in real-time pipelines, Azure, PySpark, and production ETL architectures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Ambient Grain Overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-mark">
+        jasmine<span>.</span>sherif
+        <span class="status-dot" title="Available for DE roles"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li>
+          <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme"
+            title="Toggle Dark/Light Mode">
+            <span class="theme-icon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🖼️ HERO & ABOUT SECTION (Split Layout & Authoritative Anchor Card) -->
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">data engineer &middot; cairo, egypt</p>
+        <h1>Meet Jasmine:<br><span class="highlight">Your Personal Data Composer.</span></h1>
+        <p class="lede">
+          Hand me the work, grab a coffee ☕, and just sit back to listen to the full data orchestra.
+          Every data stream is an instrument waiting to be tuned. I harmonize raw data into
+          refined intelligence that fuels smarter decisions and business prosperity.
+        </p>
+
+        <div class="hero-meta-strip">
+          <div class="meta-pill"><span class="dot"></span> B.Sc. Computer Engineering</div>
+          <div class="meta-pill"><span class="dot"></span> Real-Time &amp; Batch ETL</div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="#projects">
+            <svg class="btn-icon" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+            </svg>
+            Explore Interactive Pipelines
+          </a>
+          <a class="btn btn-ghost" href="about.html">Read Story</a>
+        </div>
+      </div>
+
+      <!-- Hero Photo Card (Authoritative Visual Anchor) -->
+      <div class="hero-visual">
+        <div class="hero-photo-card">
+          <div class="photo-frame">
+            <img src="assets/me.png" alt="Jasmine Sherif - Data Engineer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tech Stack Marquee / Strip -->
+  <section class="stack-strip">
+    <div class="wrap">
+      <div class="stack-row">
+        <span class="stack-item">Azure Event Hubs</span>
+        <span class="stack-item">PySpark</span>
+        <span class="stack-item">Databricks</span>
+        <span class="stack-item">Apache Kafka</span>
+        <span class="stack-item">Docker</span>
+        <span class="stack-item">SSIS</span>
+        <span class="stack-item">SQL Server</span>
+        <span class="stack-item">Hive</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎓 EDUCATION & CREDENTIALS SECTION -->
+  <section class="credentials-section" id="education">
+    <div class="wrap">
+      <div class="credentials-header">
+        <p class="eyebrow">credentials &amp; academic background</p>
+        <h2>Education &amp; Field Experience</h2>
+      </div>
+
+      <div class="credentials-grid">
+        <!-- Degree & Academic Card -->
+        <article class="edu-card">
+          <div class="edu-card-head">
+            <div>
+              <h3 class="degree-title">B.Sc. in Computer Engineering &amp; Artificial Intelligence</h3>
+              <p class="institution-name">Sohag University | Faculty of Engineering</p>
+            </div>
+            <span class="edu-badge">2023 &ndash; 2028</span>
+          </div>
+
+          <div class="metrics-row">
+            <div class="metric-item">
+              <span class="metric-val">3.8 / 4.0</span>
+              <span class="metric-label">Cumulative GPA</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">Top Rank</span>
+              <span class="metric-label">Ranked Top of Class (Last Academic Year)</span>
+            </div>
+          </div>
+
+          <p>
+            Specialized curriculum combining distributed computing systems, database design,
+            advanced machine learning algorithms, and high-performance software architecture.
+          </p>
+        </article>
+
+        <!-- Practical Field Training Card -->
+        <article class="internship-card">
+          <div>
+            <span class="internship-badge">⚡ DEPI &middot; 6 Months (06/2025 &ndash; 12/2025)</span>
+            <h3>DEPI Data Engineering Training</h3>
+            <p>
+              Completed an intensive 6-month specialized field program in Data Engineering (June 2025 &ndash; December
+              2025).
+              Engineered production-grade ETL pipelines, distributed Spark streaming jobs, star/snowflake data
+              warehouses,
+              and query optimization over multi-node clusters.
+            </p>
+            <a href="https://drive.google.com/file/d/1dAL3a_dbtQsj4fggtNCQ42muFEBdXTo1/view?usp=drive_link"
+              target="_blank" rel="noopener" class="proof-badge-link" style="margin-top: 0.4rem;">
+              📜 View DEPI Certificate ➔
+            </a>
+          </div>
+        </article>
+
+        <!-- NTI Internship Card -->
+        <article class="internship-card">
+          <div>
+            <span class="internship-badge">🏢 NTI &middot; Big Data Analytics</span>
+            <h3>NTI Big Data Analytics Internship</h3>
+            <p>
+              Completed an intensive internship program focused on Big Data Analytics at the National Telecommunication Institute (NTI). 
+              Gained practical experience with big data ecosystems and analytics workflows.
+            </p>
+            <a href="https://drive.google.com/file/d/1Dl5FFyPxtpHtQJvyKccxCon-M_n7lBMh/view?usp=drive_link"
+              target="_blank" rel="noopener" class="proof-badge-link" style="margin-top: 0.4rem;">
+              📜 View NTI Certificate ➔
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚡ INTERACTIVE "PIPELINE STORY" PROJECTS SECTION -->
+  <section class="projects-section" id="projects">
+    <div class="wrap">
+      <div class="projects-header">
+        <p class="eyebrow">interactive portfolio</p>
+        <h2>Live "Pipeline Story" Projects</h2>
+        <p class="lede">
+          Click any project below to launch its interactive 3-stage data flow:
+          <strong>Problem Source ➔ ETL / Transformation ➔ Business Outcome</strong>.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <article class="project-card">
+          <div>
+            <div class="card-top">
+              <div class="tech-icon-wrapper">AZ</div>
+              <span class="pipeline-badge">3-Stage Live Flow</span>
+            </div>
+            <h3 class="project-title">Real-Time Renewable Energy Platform</h3>
+            <p class="project-desc">
+              Predictive analytics platform monitoring 3 wind farms and 3 solar farms in real time. Owned the on-premise
+              SSIS/SQL Server architecture and Solar Azure pipeline to forecast site-level output.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Azure Event Hubs</span>
+              <span class="skill-tag">Databricks</span>
+              <span class="skill-tag">PySpark</span>
+              <span class="skill-tag">SSIS</span>
+              <span class="skill-tag">SQL Server</span>
+            </div>
+          </div>
+          <div class="project-card-footer">
+            <button class="inspect-btn" onclick="openPipelineModal('project-1')">
+              Inspect Pipeline Story
+              <svg class="btn-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </article>
+        <!-- Project Card 2 -->
+        <article class="project-card">
+          <div>
+            <div class="card-top">
+              <div class="tech-icon-wrapper">NYC</div>
+              <span class="pipeline-badge">3-Stage Live Flow</span>
+            </div>
+            <h3 class="project-title">NYC TLC Taxi Trip Analytics Pipeline</h3>
+            <p class="project-desc">
+              PySpark ETL pipeline over NYC taxi trip data (Jan–Mar 2025) staged via Docker into Hive &amp; PostgreSQL.
+              Surfaced trip hotspots via Python &amp; Flask dashboard.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">PySpark</span>
+              <span class="skill-tag">Hive</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Python &amp; Flask</span>
+            </div>
+          </div>
+          <div class="project-card-footer" style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+            <button class="inspect-btn" onclick="openPipelineModal('project-2')">
+              Inspect Pipeline Story
+              <svg class="btn-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+            <a href="https://github.com/tasneemsaleh23/NYC_Taxi_Data_Analytics_Pipeline" target="_blank" rel="noopener"
+              class="github-repo-link" style="margin-top:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="project-card">
+          <div>
+            <div class="card-top">
+              <div class="tech-icon-wrapper">AW</div>
+              <span class="pipeline-badge">3-Stage Live Flow</span>
+            </div>
+            <h3 class="project-title">AdventureWorks Sales ETL &amp; Analysis</h3>
+            <p class="project-desc">
+              First end-to-end Python &amp; Pandas ETL pipeline extracting relational database tables, performing
+              extensive data cleaning &amp; table merges, and surfacing sales &amp; product trend analytics.
+            </p>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">SQL Server</span>
+              <span class="skill-tag">ETL Pipeline</span>
+              <span class="skill-tag">Data Cleaning</span>
+            </div>
+          </div>
+          <div class="project-card-footer" style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+            <button class="inspect-btn" onclick="openPipelineModal('project-3')">
+              Inspect Pipeline Story
+              <svg class="btn-icon" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+            <a href="https://github.com/jasmine-sherif/ETL-Project" target="_blank" rel="noopener"
+              class="github-repo-link" style="margin-top:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub Repo
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🛠️ ENGINEERING SERVICES SECTION -->
+  <section class="services-section" id="services">
+    <div class="wrap">
+      <div class="projects-header">
+        <p class="eyebrow">end-to-end data capabilities</p>
+        <h2>Engineering Services &amp; Pipeline Patterns</h2>
+        <p class="lede">
+          Delivering production-grade data architectures based on the battle-tested 3-stage pipeline methodology:
+          <strong>Ingestion ➔ Distributed Transformation ➔ Analytical Warehousing &amp; BI</strong>.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <article class="service-card">
+          <div>
+            <span class="service-stage-tag">STAGE 01 &middot; INGESTION &amp; STREAMING</span>
+            <h3 class="service-title">Real-Time Ingestion &amp; Stream Orchestration</h3>
+            <p class="service-desc">
+              Architecting fault-tolerant streaming pipelines for continuous, high-volume event feeds.
+              Specializing in multi-threaded API telemetry simulation, Kafka/Event Hubs watermarking, and zero-loss
+              landing zones under network latency spikes.
+            </p>
+          </div>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-card">
+          <div>
+            <span class="service-stage-tag">STAGE 02 &middot; DISTRIBUTED TRANSFORMATION</span>
+            <h3 class="service-title">Distributed Spark ETL &amp; Delta Lake Engines</h3>
+            <p class="service-desc">
+              Building high-throughput PySpark engines over Databricks and Docker clusters.
+              Implementing stateful watermarking, schema enforcement, Delta Lake ACID upserts (MERGE INTO), and
+              automated SSIS staging packages under deadline constraints.
+            </p>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card">
+          <div>
+            <span class="service-stage-tag">STAGE 03 &middot; WAREHOUSING &amp; BI</span>
+            <h3 class="service-title">Analytical Data Warehouses &amp; Live BI Dashboards</h3>
+            <p class="service-desc">
+              Designing point-in-time analytical warehouses featuring Snowflake schemas with Slowly Changing Dimensions
+              (SCD Type 2), Hive metastores backed by PostgreSQL, and real-time Flask, Streamlit &amp; Power BI
+              executive dashboards.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚡ TECHNICAL SKILLS, LEADERSHIP & VERIFIED PROOF SECTION -->
+  <section class="skills-section" id="skills">
+    <div class="wrap">
+      <div class="projects-header">
+        <p class="eyebrow">technical stack &amp; core competencies</p>
+        <h2>Technical Stack, Leadership &amp; Verified Proof</h2>
+        <p class="lede">
+          Rigorous technical mastery coupled with soft-skill resilience, leadership in high-pressure team settings, and
+          verified competitive achievements.
+        </p>
+      </div>
+
+      <div class="skills-main-grid">
+        <!-- Technical Skills Card -->
+        <article class="skills-category-card">
+          <div>
+            <div class="skills-group">
+              <h4 class="skills-group-title">💻 Programming Languages</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="skills-group-title">☁️ Cloud &amp; Data Platforms</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Azure (Event Hubs, Data Lake, Data Factory)</span>
+                <span class="skill-tag">Databricks</span>
+                <span class="skill-tag">Delta Lake</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Apache Kafka</span>
+                <span class="skill-tag">SSIS</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="skills-group-title">🐘 Big Data &amp; Distributed Systems</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Apache Hive</span>
+                <span class="skill-tag">Apache Flink</span>
+                <span class="skill-tag">Apache Flume</span>
+                <span class="skill-tag">HBase</span>
+                <span class="skill-tag">HDFS</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="skills-group-title">⚙️ Frameworks &amp; Tools</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Apache Spark</span>
+                <span class="skill-tag">Apache Airflow</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">VS Code</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h4 class="skills-group-title">📊 ML &amp; Analytics</h4>
+              <div class="skill-tags">
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">XGBoost</span>
+                <span class="skill-tag">Seaborn</span>
+                <span class="skill-tag">Matplotlib</span>
+                <span class="skill-tag">Plotly</span>
+                <span class="skill-tag">SMOTE</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Leadership, Languages & Proof Card -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <!-- Spoken Languages & Certifications -->
+          <article class="skills-category-card">
+            <div>
+              <h4 class="skills-group-title">🌐 Spoken Languages</h4>
+              <ul
+                style="list-style: none; padding: 0; margin: 0.8rem 0 0; font-size: 0.92rem; color: var(--text-muted); line-height: 1.8;">
+                <li><strong style="color: var(--text);">Arabic:</strong> Native Speaker</li>
+                <li>
+                  <strong style="color: var(--text);">English:</strong>
+                  <a href="https://drive.google.com/file/d/1F9HPVArVkSxy-dhIKpl4dq0LEg-RXYkt/view?usp=drive_link"
+                    target="_blank" rel="noopener"
+                    style="color: var(--accent); text-decoration: underline; font-weight: 500;">
+                    IELTS Certified (Overall Band 7.5) ↗
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Soft Skills -->
+          <article class="skills-category-card">
+            <div>
+              <h4 class="skills-group-title">💡 Soft Skills</h4>
+              <ul
+                style="list-style: none; padding: 0; margin: 0.8rem 0 0; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65;">
+                <li style="margin-bottom: 0.6rem;">
+                  <strong style="color: var(--accent);">Leadership:</strong> Proven by working as a Vocal Coach &amp;
+                  Ensemble Director (directing team harmony, active listening, alignment, and performance under
+                  pressure).
+                </li>
+                <li style="margin-bottom: 0.6rem;">
+                  <strong style="color: var(--text);">Self-Directed &amp; Rapid Learning:</strong> Thriving under high
+                  pressure and strict deadline windows (e.g. 6-hour hackathons).
+                </li>
+                <li style="margin-bottom: 0.6rem;">
+                  <strong style="color: var(--text);">Ownership &amp; Resilience:</strong> Full end-to-end
+                  accountability across complex data pipeline architectures.
+                </li>
+                <li style="margin-bottom: 0.6rem;">
+                  <strong style="color: var(--text);">Depth-First Technical Curiosity:</strong> Relentless drive to
+                  master system internals, JVM metastores, and SCD Type 2 mechanics.
+                </li>
+                <li style="margin-bottom: 0.6rem;">
+                  <strong style="color: var(--text);">Sound Decision-Making:</strong> Pragmatic engineering choices
+                  under tight constraints.
+                </li>
+                <li>
+                  <strong style="color: var(--text);">Honesty &amp; Precision:</strong> Absolute precision and integrity
+                  in self-representation and system design.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Verified Credentials & Certificates Card -->
+          <article class="skills-category-card" style="border-left: 4px solid var(--accent);">
+            <div>
+              <h4 class="skills-group-title">🏆 Verified Credentials &amp; Proof</h4>
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.8rem;">
+                <a href="https://drive.google.com/drive/folders/1LfMwHpXNThD7C7fe7LyC9hpwzNGIOczO?usp=drive_link"
+                  target="_blank" rel="noopener" class="proof-badge-link">
+                  🏅 View DataCamp Associate SQL Data Engineer ➔
+                </a>
+                <a href="https://drive.google.com/file/d/1Dl5FFyPxtpHtQJvyKccxCon-M_n7lBMh/view?usp=drive_link"
+                  target="_blank" rel="noopener" class="proof-badge-link">
+                  🏢 View NTI Big Data Analytics Internship ➔
+                </a>
+                <a href="https://drive.google.com/file/d/1jQj0Lyt0BySCAbWpIx0pAL9TKrtGMB-3/view?usp=drive_link"
+                  target="_blank" rel="noopener" class="proof-badge-link">
+                  🚀 View NASA Space Apps Certificate ➔
+                </a>
+                <a href="https://drive.google.com/file/d/1dAL3a_dbtQsj4fggtNCQ42muFEBdXTo1/view?usp=drive_link"
+                  target="_blank" rel="noopener" class="proof-badge-link">
+                  ⚡ View DEPI Data Engineering Certificate ➔
+                </a>
+                <a href="https://drive.google.com/file/d/1F9HPVArVkSxy-dhIKpl4dq0LEg-RXYkt/view?usp=drive_link"
+                  target="_blank" rel="noopener" class="proof-badge-link">
+                  🎓 View IELTS 7.5 Certificate ➔
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔄 INTERACTIVE PIPELINE DEEP-DIVE MODAL CONTAINER -->
+  <div class="modal-backdrop" id="pipelineModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-info">
+          <h2 id="modalProjectTitle">Interactive Data Pipeline Story</h2>
+          <p id="modalProjectSub">Hover or tap cards below to reveal technical implementation details</p>
+        </div>
+        <button class="modal-close" onclick="closePipelineModal()" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="pipeline-story-flow" id="modalPipelineContent">
+          <!-- Dynamically populated 3-node connected flow -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Jasmine Sherif &middot; Data Engineer</span>
+      <div class="footer-links">
+        <a href="https://github.com/jasmine-sherif" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/jasmine-sherif-" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:jasminesherif37@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript for Modals & Flip Cards -->
+  <script>
+    const projectsData = {
+      'project-1': {
+        title: 'Real-Time Renewable Energy Platform',
+        sub: 'Azure Event Hubs ➔ Databricks PySpark ➔ SSIS & SQL Server Warehouse',
+        nodes: {
+          source: {
+            step: 'Node 01 &middot; Input Source',
+            title: 'Problem Source',
+            story: 'Weather API polled every 10 min; a multi-threaded Python simulation script emulates 5-second telemetry required for real-time models without throttling.',
+            image: 'assets/azure_video.mp4',
+            backTitle: 'Visual Demonstration',
+            backText: 'Live 5-second weather telemetry simulation stream.'
+          },
+          transform: {
+            step: 'Node 02 &middot; ETL &amp; Engine',
+            title: 'ETL & Transformation',
+            story: 'Event Hubs ingests the stream; PySpark on Databricks transforms raw feeds for the Solar Azure pipeline into clean Delta Lake layers before automated SSIS packaging.',
+            image: 'assets/databricks.jpg',
+            backTitle: 'Visual Architecture',
+            backText: 'Databricks PySpark to Delta Lake pipeline flow.'
+          },
+          outcome: {
+            step: 'Node 03 &middot; Business Value',
+            title: 'Business Outcome',
+            story: 'Clean data lands in the data lake; on-premise pipeline moves it via SSIS into a SQL Server warehouse for instant power output forecasting.',
+            image: [
+              { src: 'assets/azure.png', alt: 'Real-Time Renewable Energy Dashboard Visualization' },
+              { src: 'assets/Visual 3.png', alt: 'Renewable Energy Analytics Visual 3' },
+              { src: 'assets/Schmea.jpg', alt: 'Data Warehouse Architecture &amp; Schema' }
+            ],
+            backTitle: 'Visual Dashboard &amp; Architecture Schema',
+            backText: 'Real-time forecasting dashboard, analytics visual &amp; DB schema. (Swipe / tap to explore)'
+          }
+        }
+      },
+      'project-2': {
+        title: 'NYC TLC Taxi Trip Analytics Pipeline',
+        sub: 'Docker ➔ PySpark ETL ➔ Hive Metastore & PostgreSQL ➔ Python & Flask Dashboard',
+        github: 'https://github.com/tasneemsaleh23/NYC_Taxi_Data_Analytics_Pipeline',
+        nodes: {
+          source: {
+            step: 'Node 01 &middot; Data Ingestion',
+            title: 'Problem Source',
+            story: 'Heavy raw NYC taxi trip datasets (Jan-Mar 2025) needed rapid ingestion under a tight 6-hour deadline. Built Docker-volume staging for raw file landing.',
+            image: 'assets/Taxi_project/data.avif',
+            backTitle: 'Visual Demonstration',
+            backText: 'NYC TLC raw taxi trip data source & Docker-volume staging layer.'
+          },
+          transform: {
+            step: 'Node 02 &middot; Architecture',
+            title: 'ETL & Transformation',
+            story: 'PySpark container handles high-speed schema enforcement, cleansing, trip metric calculations, and zone congestion KPI computations.',
+            image: 'assets/ph-transform.svg',
+            backTitle: 'Visual Architecture',
+            backText: 'Containerized PySpark cleansing & KPI engine.'
+          },
+          outcome: {
+            step: 'Node 03 &middot; Business Value',
+            title: 'Business Outcome',
+            story: 'Hive data warehouse metastore backed by PostgreSQL instead of embedded Derby to prevent JVM locks. Shipped live interactive Python & Flask dashboard.',
+            image: [
+              { src: 'assets/Taxi_project/visual 1.jpg', alt: 'NYC TLC Taxi Analytics Visual 1' },
+              { src: 'assets/Taxi_project/Visual 2.jpg', alt: 'NYC TLC Taxi Analytics Visual 2' }
+            ],
+            backTitle: 'Visual Dashboard',
+            backText: 'NYC TLC trip analytics dashboard visuals & KPI metrics. (Swipe / tap to explore)'
+          }
+        }
+      },
+      'project-3': {
+        title: 'AdventureWorks Sales ETL & Analysis',
+        sub: 'Relational DB Extraction ➔ Python & Pandas Cleansing ➔ Visual Trend Analytics',
+        github: 'https://github.com/jasmine-sherif/ETL-Project',
+        nodes: {
+          source: {
+            step: 'Node 01 &middot; Data Source',
+            title: 'Problem Source',
+            story: 'Raw transactional data normalized across dozens of database tables containing nulls, inconsistent types, and unaggregated sales records.',
+            image: 'assets/Third_Project/source.png',
+            backTitle: 'Visual Source Data',
+            backText: 'AdventureWorks relational database raw source schema & tables.'
+          },
+          transform: {
+            step: 'Node 02 &middot; Architecture',
+            title: 'ETL & Transformation',
+            story: 'Python & Pandas ETL pipeline extracting raw database tables, performing extensive data cleaning (null handling, type conversions, table merges), and preparing analysis-ready DataFrames.',
+            image: 'assets/ph-transform.svg',
+            backTitle: 'Visual Architecture',
+            backText: 'Python & Pandas data extraction, cleansing & transformation pipeline.'
+          },
+          outcome: {
+            step: 'Node 03 &middot; Business Value',
+            title: 'Business Outcome',
+            story: 'Built analytical visualizations surfacing hidden sales and product trends, giving stakeholders direct visibility into revenue drivers and inventory performance.',
+            image: [
+              { src: 'assets/Third_Project/visual 1.png', alt: 'AdventureWorks Sales & Product Trend Visual 1' },
+              { src: 'assets/Third_Project/visual 2.png', alt: 'AdventureWorks Sales & Product Trend Visual 2' },
+              { src: 'assets/Third_Project/visual 3.png', alt: 'AdventureWorks Sales & Product Trend Visual 3' },
+              { src: 'assets/Third_Project/visual 4.png', alt: 'AdventureWorks Sales & Product Trend Visual 4' }
+            ],
+            backTitle: 'Visual Dashboards & Analytics',
+            backText: 'Sales & product trend analysis visuals. (Swipe / tap to explore)'
+          }
+        }
+      }
+    };
+
+    function renderNodeMedia(src, defaultAlt = '') {
+      if (Array.isArray(src)) {
+        return src.map((item, idx) => {
+          const s = typeof item === 'string' ? item : item.src;
+          const a = typeof item === 'object' && item.alt ? item.alt : `${defaultAlt} ${idx + 1}`;
+          if (s.endsWith('.mp4') || s.endsWith('.webm')) {
+            return `<video src="${s}" autoplay loop muted playsinline aria-label="${a}"></video>`;
+          }
+          return `<img src="${s}" alt="${a}">`;
+        }).join('');
+      }
+      const itemSrc = typeof src === 'string' ? src : src.src;
+      const itemAlt = typeof src === 'object' && src.alt ? src.alt : defaultAlt;
+      if (itemSrc.endsWith('.mp4') || itemSrc.endsWith('.webm')) {
+        return `<video src="${itemSrc}" autoplay loop muted playsinline aria-label="${itemAlt}"></video>`;
+      }
+      return `<img src="${itemSrc}" alt="${itemAlt}">`;
+    }
+
+    function openPipelineModal(projectId) {
+      const data = projectsData[projectId];
+      if (!data) return;
+
+      document.getElementById('modalProjectTitle').innerText = data.title;
+      let subHtml = data.sub;
+      if (data.github) {
+        subHtml += ` &nbsp;|&nbsp; <a href="${data.github}" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: underline;">View on GitHub ➔</a>`;
+      }
+      document.getElementById('modalProjectSub').innerHTML = subHtml;
+
+      const container = document.getElementById('modalPipelineContent');
+      container.innerHTML = `
+        <!-- NODE 1 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.source.step}</span>
+                  </div>
+                  <h4 class="node-title">${data.nodes.source.title}</h4>
+                  <p class="node-desc">${data.nodes.source.story}</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.source.backTitle}</span>
+                  </div>
+                  <div class="node-preview-img ${Array.isArray(data.nodes.source.image) && data.nodes.source.image.length > 1 ? 'is-carousel' : ''}" onclick="openMediaLightbox(this)">
+                    ${renderNodeMedia(data.nodes.source.image, 'Source Preview')}
+                  </div>
+                  <p class="node-caption">${data.nodes.source.backText}</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 1 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 2 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.transform.step}</span>
+                  </div>
+                  <h4 class="node-title">${data.nodes.transform.title}</h4>
+                  <p class="node-desc">${data.nodes.transform.story}</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.transform.backTitle}</span>
+                  </div>
+                  <div class="node-preview-img ${Array.isArray(data.nodes.transform.image) && data.nodes.transform.image.length > 1 ? 'is-carousel' : ''}" onclick="openMediaLightbox(this)">
+                    ${renderNodeMedia(data.nodes.transform.image, 'ETL Preview')}
+                  </div>
+                  <p class="node-caption">${data.nodes.transform.backText}</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONNECTOR 2 -->
+        <div class="pipeline-node-connector">
+          <div class="connector-line"></div>
+          <span class="connector-arrow">➔</span>
+        </div>
+
+        <!-- NODE 3 -->
+        <div class="flip-scene">
+          <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.outcome.step}</span>
+                  </div>
+                  <h4 class="node-title">${data.nodes.outcome.title}</h4>
+                  <p class="node-desc">${data.nodes.outcome.story}</p>
+                </div>
+                <span class="flip-hint">↻ Hover or tap for visual demo</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div>
+                  <div class="node-header">
+                    <span class="node-step-tag">${data.nodes.outcome.backTitle}</span>
+                  </div>
+                  <div class="node-preview-img ${Array.isArray(data.nodes.outcome.image) && data.nodes.outcome.image.length > 1 ? 'is-carousel' : ''}" onclick="openMediaLightbox(this)">
+                    ${renderNodeMedia(data.nodes.outcome.image, 'Outcome Preview')}
+                  </div>
+                  <p class="node-caption">${data.nodes.outcome.backText}</p>
+                </div>
+                <span class="flip-hint">↻ Tap to return</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('pipelineModal').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePipelineModal() {
+      document.getElementById('pipelineModal').classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'pipelineModal') {
+        closePipelineModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closePipelineModal();
+    });
+
+    /* WhatsApp-Style Lightbox & Carousel Logic */
+    let currentLightboxMedia = [];
+    let currentLightboxIndex = 0;
+    let currentLightboxCaption = '';
+
+    function openMediaLightbox(element, captionOverride = '') {
+      if (window.event) window.event.stopPropagation();
+
+      let mediaElements = [];
+      if (element.classList && element.classList.contains('node-preview-img')) {
+        mediaElements = Array.from(element.querySelectorAll('img, video'));
+      } else if (element.tagName === 'IMG' || element.tagName === 'VIDEO') {
+        const parent = element.closest('.node-preview-img');
+        if (parent) {
+          mediaElements = Array.from(parent.querySelectorAll('img, video'));
+          currentLightboxIndex = mediaElements.indexOf(element);
+        } else {
+          mediaElements = [element];
+          currentLightboxIndex = 0;
+        }
+      }
+
+      if (!mediaElements.length) return;
+
+      currentLightboxMedia = mediaElements.map(el => ({
+        src: el.getAttribute('src'),
+        isVideo: el.tagName.toLowerCase() === 'video',
+        alt: el.getAttribute('alt') || el.getAttribute('aria-label') || ''
+      }));
+
+      if (typeof currentLightboxIndex !== 'number' || currentLightboxIndex < 0) {
+        currentLightboxIndex = 0;
+      }
+
+      const captionNode = element.closest('.flip-face') ? element.closest('.flip-face').querySelector('.node-caption') : null;
+      currentLightboxCaption = captionOverride || (captionNode ? captionNode.innerText : (currentLightboxMedia[currentLightboxIndex].alt || ''));
+
+      renderLightboxSlide();
+      document.getElementById('mediaLightbox').classList.add('is-open');
+    }
+
+    function renderLightboxSlide() {
+      const container = document.getElementById('lightboxMediaContainer');
+      const media = currentLightboxMedia[currentLightboxIndex];
+      if (!media) return;
+
+      if (media.isVideo) {
+        container.innerHTML = `<video src="${media.src}" controls autoplay loop muted playsinline></video>`;
+      } else {
+        container.innerHTML = `<img src="${media.src}" alt="${media.alt}">`;
+      }
+
+      const prevBtn = document.getElementById('lightboxPrev');
+      const nextBtn = document.getElementById('lightboxNext');
+
+      if (currentLightboxMedia.length > 1) {
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+      } else {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+      }
+
+      const slideCaption = media.alt || currentLightboxCaption;
+      const countInfo = currentLightboxMedia.length > 1 ? ` (${currentLightboxIndex + 1}/${currentLightboxMedia.length})` : '';
+      document.getElementById('lightboxCaption').innerText = slideCaption + countInfo;
+    }
+
+    function navigateLightbox(direction) {
+      if (window.event) window.event.stopPropagation();
+      currentLightboxIndex = (currentLightboxIndex + direction + currentLightboxMedia.length) % currentLightboxMedia.length;
+      renderLightboxSlide();
+    }
+
+    function closeMediaLightbox() {
+      document.getElementById('mediaLightbox').classList.remove('is-open');
+      const container = document.getElementById('lightboxMediaContainer');
+      container.innerHTML = '';
+    }
+
+    function closeLightboxOnBackdrop(e) {
+      if (e.target.id === 'mediaLightbox') {
+        closeMediaLightbox();
+      }
+    }
+
+    /* Theme Switcher Logic */
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('portfolio-theme', theme);
+      const icons = document.querySelectorAll('.theme-icon');
+      icons.forEach(icon => {
+        icon.innerText = theme === 'light' ? '☀️' : '🌙';
+      });
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+    }
+
+    // Initialize theme icon on load
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+      applyTheme(savedTheme);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMediaLightbox();
+      if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      if (e.key === 'ArrowRight') navigateLightbox(1);
+    });
+  </script>
+
+  <!-- 🔍 WhatsApp-Style Media Lightbox Modal -->
+  <div class="media-lightbox" id="mediaLightbox" onclick="closeLightboxOnBackdrop(event)">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" onclick="closeMediaLightbox()" aria-label="Close enlarged media">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" onclick="navigateLightbox(-1)"
+        aria-label="Previous media">&#10094;</button>
+
+      <div class="lightbox-media-container" id="lightboxMediaContainer">
+        <!-- Dynamically populated enlarged image or video -->
+      </div>
+
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" onclick="navigateLightbox(1)"
+        aria-label="Next media">&#10095;</button>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+</body>
+
+</html>
